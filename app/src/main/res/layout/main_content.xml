@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="64sp"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/beginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_shape"
+            android:padding="12dp"
+            android:text="Begin Examination"
+            android:textColor="#fff"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="24sp" />
+
+
+        <RadioGroup
+            android:id="@+id/feelingRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RadioButton
+                android:id="@+id/reallyGoodRB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text=":}"
+                android:textSize="@dimen/emoticonSize" />
+
+            <RadioButton
+                android:id="@+id/goodRB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text=":)"
+                android:textSize="@dimen/emoticonSize" />
+
+            <RadioButton
+                android:id="@+id/okRB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text=":|"
+                android:textSize="@dimen/emoticonSize" />
+
+            <RadioButton
+                android:id="@+id/notOkRB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text=":("
+                android:textSize="@dimen/emoticonSize" />
+
+            <RadioButton
+                android:id="@+id/badRB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text=":{"
+                android:textSize="@dimen/emoticonSize" />
+
+            <RadioButton
+                android:id="@+id/reallyBadRB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text=":'("
+                android:textSize="@dimen/emoticonSize" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/symptomsTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Which of the following symptoms have you been feeling?"
+            android:textSize="24sp" />
+
+        <TableRow
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/feverSymptom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onBoxChecked"
+                android:text="Fever"
+                android:textSize="@dimen/checkBoxSize" />
+
+            <CheckBox
+                android:id="@+id/headacheSymptom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onBoxChecked"
+                android:text="Head Hurts"
+                android:textSize="@dimen/checkBoxSize" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/runnyNoseSymptom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onBoxChecked"
+                android:text="Runny Nose"
+                android:textSize="@dimen/checkBoxSize" />
+
+            <CheckBox
+                android:id="@+id/soreThroatSymptom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onBoxChecked"
+                android:text="Throat Hurts"
+                android:textSize="@dimen/checkBoxSize" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/chillsSymptom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onBoxChecked"
+                android:text="Chills"
+                android:textSize="@dimen/checkBoxSize" />
+
+            <CheckBox
+                android:id="@+id/soreMusclesSymptom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onBoxChecked"
+                android:text="Sore Muscles"
+                android:textSize="@dimen/checkBoxSize" />
+
+        </TableRow>
+
+
+        <TextView
+            android:id="@+id/illnessList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="32sp" />
+
+
+        <WebView
+            android:id="@+id/gifView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></WebView>
+
+        <include
+            android:id="@+id/bpmView"
+            layout="@layout/timer_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <EditText
+            android:id="@+id/beatsCounted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="Enter hearth beats counted"
+            android:inputType="number"
+            android:textSize="@dimen/checkBoxSize" />
+
+        <Button
+            android:id="@+id/calculateBPMButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_shape"
+            android:padding="12dp"
+            android:text="Calculate"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/bpmResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Result: "
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/finishButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@drawable/button_shape"
+            android:padding="12dp"
+            android:text="Finish"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+
+        <ImageButton
+            android:id="@+id/twitter_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/tw__composer_logo_blue"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/horizontalRuler"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#000"
+            android:visibility="gone"></View>
+
+        <TextView
+            android:id="@+id/didYouKnowTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="Did You Know?"
+            android:textColor="#000000"
+            android:textSize="@dimen/billTextTitleSize" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            android:visibility="gone"></ListView>
+
+
+    </LinearLayout>
+
+
+</ScrollView>
