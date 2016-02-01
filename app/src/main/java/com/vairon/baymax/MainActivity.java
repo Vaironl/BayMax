@@ -48,8 +48,8 @@ import okhttp3.Response;
 public class MainActivity extends AppCompatActivity {
 
     // Note: Your consumer key and secret should be obfuscated in your source code before shipping.
-    private static final String TWITTER_KEY = "1HoUIWpvfG3QfKyw9xoJZ8Qxg";
-    private static final String TWITTER_SECRET = "ZJPRfCgUICFp5b8lydfiDwAouCLJr2wIXLXxl2uBjsMGbzXz6J";
+    private static final String TWITTER_KEY = "KEY";
+    private static final String TWITTER_SECRET = "SECRET";
 
 
     private String TAG = this.getClass().getName();
