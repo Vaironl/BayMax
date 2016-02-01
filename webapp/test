@@ -1,0 +1,5 @@
+<div id="buttons">
+<button id="l" type="button" class="btn btn-lg btn-primary" onclick="buttons('L');">Left Arm</button><br><br>
+<button id"r"="" type="button" class="btn btn-lg btn-primary" onclick="buttons('R');">Right Arm</button><br><br>
+<button id="lr" type="button" class="btn btn-lg btn-primary" onclick="buttons('LR');">Both!</button>
+</div>

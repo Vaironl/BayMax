@@ -1,0 +1,15 @@
+.tophead {
+	padding-top: 2%;
+	background-color: darkgray;
+}
+.content {
+	padding-left: 2%;
+	padding-right: 2%;
+}
+.footer {
+    width: 640px;
+    margin: 0% -320px;
+    position: fixed;
+    left: 50%;
+    bottom: 0%;
+}
